@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小沈のblog - 正在努力的小沈</title><meta name="author" content="正在努力的小沈"><meta name="copyright" content="正在努力的小沈"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="知识的敌人不是无知，而是已经掌握知识的幻觉。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小沈のblog">
+<meta property="og:url" content="http://xiaoshen-qwq.github.io/page/5/index.html">
+<meta property="og:site_name" content="小沈のblog">
+<meta property="og:description" content="知识的敌人不是无知，而是已经掌握知识的幻觉。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/usericon/852112.png">
+<meta property="article:author" content="正在努力的小沈">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/usericon/852112.png"><link rel="shortcut icon" href="https://cdn.luogu.com.cn/upload/usericon/852112.png"><link rel="canonical" href="http://xiaoshen-qwq.github.io/page/5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="../../css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":0,"languages":{"author":"作者: 正在努力的小沈","link":"链接: ","source":"来源: 小沈のblog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小沈のblog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2024-11-01 22:05:56'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://t.mwm.moe/fj);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="../../index.html"><span class="site-name">小沈のblog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">小沈のblog</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/Xiaoshen-QwQ" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="../../../../../3884528022@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="../../2024/10/23/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/P1564%20%E9%A2%98%E8%A7%A3/" title="P1564 题解">P1564 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-23T09:06:22.797Z" title="发表于 2024-10-23 17:06:22">2024-10-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="../../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">洛谷题解</a></span></div><div class="content">题意 给定一个长度为 \(n\) 数列 \(a\)，数列 \(a\) 中只包含 \(1, 2\)，你需要将这个分成几段，使得你分的每一段 \(1\) 和 \(2\) 的个数不超过 \(m\)，求最小的分段个数。 ## 思路 我们可以将数列中 \(2\) 改成 \(-1\)，然后定义转态 \(dp_i\) 表示以 \(i\) 结尾的最小分段数量，转移为： \[dp_i = \max (dp_j + 1)\] 满足 \(|sum_i - sum_j| \le m\) 或 \(|sum_i - sum_j| = i - j\) 即可转移。 ## 代码 1234567891011121314151617181920212223242526#include&lt;bits/stdc++.h&gt;using namespace std;const int N = 2510;int n, m, a[N], sum[N], dp[N];int main() &#123;  cin &gt;&gt; n &gt;&gt; m;  for (int i = 1; i &lt;= n;...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="../../2024/10/23/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/P1512%20%E9%A2%98%E8%A7%A3/" title="P1512 题解">P1512 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-23T09:06:22.795Z" title="发表于 2024-10-23 17:06:22">2024-10-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="../../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">洛谷题解</a></span></div><div class="content">题意 Adam 和 Eve 玩一个游戏，他们先从 \(1900.1.1\) 到 \(2006.11.3\) 这个日期之间随意抽取一个日期出来。然后他们轮流对这个日期进行操作：  把日期的天数加 \(1\)，例如 \(1900.1.1\) 变到 \(1900.1.2\)； 把月份加 \(1\)，例如：\(1900.1.1\) 变到 \(1900.2.1\)。  其中如果天数超过应有天数则日期变更到下个月的第 \(1\) 天。月份超过 \(12\) 则变到下一年的 \(1\) 月。而且进行操作二的时候，如果有这样的日期：\(1900.1.31\)，则变成了 \(1900.2.31\)，这样的操作是非法的，我们不允许这样做。而且所有的操作均要考虑历法和闰年的规定。 谁先将日期变到 \(2006.11.4\) 谁就赢了。如果超越了指定日期不算获胜。 每次游戏都是 Adam...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="../../2024/10/23/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/P1297%20%E9%A2%98%E8%A7%A3/" title="P1297 题解">P1297 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-23T09:06:22.793Z" title="发表于 2024-10-23 17:06:22">2024-10-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="../../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">洛谷题解</a></span></div><div class="content">题意 试卷上共有 \(n\) 道单选题，第 \(i\) 道单选题有 \(a_i\)​ 个选项，这 \(a_i\)​ 个选项编号是 \(1, 2, 3, \dots, a_i\)​，每个选项成为正确答案的概率都是相等的。 现在你将答案填错了，就是将 \(a_i\) 的答案填到了 \(a_{i + 1}\) 上，你需要求出你有多少期望自己能做对几道题目（我们认为你的答案全部是正确的）。 思路 概率和期望主要考的就是你的分类讨论的技巧。 本题分为三种情况：  情况1：\(a_i = a_{i + 1}\)，对于这种情况，由于 \(a_{i + 1}\) 是一个随机的，所以期望为 \(\frac{1}{a_i}\) 也就是 \(\frac{1}{a_{i + 1}}\)。 情况2：\(a_i &gt; a_{i + 1}\)，由于答案在 \(1 \sim a_{i + 1}\) 中，所以期望为 \(\frac{a_i + 1}{a_i} \times \frac{1}{a_{i + 1}} = \frac{1}{a_i}\)。 情况3：\(a_i...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="../../2024/10/23/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/P1196%20%E9%A2%98%E8%A7%A3/" title="P1196 题解">P1196 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-23T09:06:22.790Z" title="发表于 2024-10-23 17:06:22">2024-10-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="../../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">洛谷题解</a></span></div><div class="content">题意 杨威利擅长排兵布阵，巧妙运用各种战术屡次以少胜多，难免恣生骄气。在这次决战中，他将巴米利恩星域战场划分成 \(30000\) 列，每列依次编号为 \(1, 2,\ldots ,30000\)。之后，他把自己的战舰也依次编号为 \(1, 2, \ldots , 30000\)，让第 \(i\) 号战舰处于第 \(i\) 列，形成“一字长蛇阵”，诱敌深入。这是初始阵形。当进犯之敌到达时，杨威利会多次发布合并指令，将大部分战舰集中在某几列上，实施密集攻击。合并指令为 M i j，含义为第 \(i\) 号战舰所在的整个战舰队列，作为一个整体（头在前尾在后）接至第 \(j\) 号战舰所在的战舰队列的尾部。显然战舰队列是由处于同一列的一个或多个战舰组成的。合并指令的执行结果会使队列增大。 然而，老谋深算的莱因哈特早已在战略上取得了主动。在交战中，他可以通过庞大的情报网络随时监听杨威利的舰队调动指令。 在杨威利发布指令调动舰队的同时，莱因哈特为了及时了解当前杨威利的战舰分布情况，也会发出一些询问指令：C i j。该指令意思是，询问电脑，杨威利的第 \(i\)...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="../../2024/10/23/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/P1063%20%E9%A2%98%E8%A7%A3/" title="P1063 题解">P1063 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-23T09:06:22.787Z" title="发表于 2024-10-23 17:06:22">2024-10-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="../../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">洛谷题解</a></span></div><div class="content">题意 给你一个有 \(n\) 个珠子的项链，相邻两个会释放出一定能量，记为 \(j \oplus k\)，你需要求出这串珠子最多能释放出多少能量。 定义 \(j \oplus k = m \times r \times n\)，其中 \(m\) 是 \(j\) 的头标记， \(n\) 是 \(k\) 的尾标记， \(r\) 是 \(k\) 的头标记，\(j\) 的尾标记。 ## 思路 首先这道题是一个环，我们首先要破环成链。 我们设 \(dp_{l, r}\) 表示将区间 \([l, r]\) 和并成一个珠子时可以释放的最大能量。 转移为： \[ dp_{l, r} = \max(dp_{l, k} + dp_{k, r} + a_l \times a_k \times a_r) \] 答案为 \(dp_{1, n}\)，时间复杂度为 \(\mathcal{O} (n^3)\)。 ## 代码 1234567891011121314151617181920212223#include&lt;bits/stdc++.h&gt;using...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="../../2024/10/23/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/P10502%20%E9%A2%98%E8%A7%A3/" title="P10502 题解">P10502 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-23T09:06:22.785Z" title="发表于 2024-10-23 17:06:22">2024-10-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="../../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">洛谷题解</a></span></div><div class="content">题意 给定一个 \(n \times n\) 矩阵 \(A\) 和一个正整数 \(k\)，找出和 \(S=A+A_2+A_3+...+A_k\)。 思路 这道题是矩阵乘法和矩阵快速幂的的板子题。 什么是矩阵？ 我们可以将其抽象成一个二维数组。 矩阵乘法 设A为 \(m \times p\) 的矩阵，\(B\) 为 \(p \times n\) 的矩阵，那么称 \(m \times n\) 的矩阵 \(C\) 为矩阵 \(A\) 与 \(B\) 的乘积，记作 \(C = AB\) ，其中矩阵 \(C\) 中的第 \(i\) 行第 \(j\) 列元素可以表示为： \[ (AB)_{i, j} = \sum_{k = 1}^{p} a_{i,k}b_{k,j} = a_{i, 1}b_{1, j} + a_{i, 2}b_{2, j} + \dots + a_{i, p}b_{p, j} \] 我们知道以上概念后，我们就可以继续做这道题了。 我们发现 \(k\) 有...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="../../2024/10/23/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/P10298%20%E9%A2%98%E8%A7%A3/" title="P10298 题解">P10298 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-23T09:06:22.783Z" title="发表于 2024-10-23 17:06:22">2024-10-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="../../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">洛谷题解</a></span></div><div class="content">这道题看到的第一眼，发现算法标签里有个生成树，可能很多人想都没想，就开始写生成树了，但跟最小生成树没有一点关系，下面我会介绍这两种写法。 生成树 首先看到题面，要尽可能少地对道路进行染色，那肯定要跑最小生成树呀，中途再建边不就可以了吗？所以我们就有了如下伪代码： 12345678910111213struct node&#123;  int u, v, w, id;&#125;vector&lt;node&gt; e[N]; //定义for(int i = 1;i &lt;= m;i++)&#123;  auto [u, v, w] = e[i];  if(find(u) != find(v))&#123;    加边;        连接父亲节点;  &#125;&#125; 写完生成树了，那就到了最关键的一步，染色。  染色 这个题目的染色是不是跟二分图染色很像（不会也没关系）。 我们首先在 dfs 的时候传入你所需要染的颜色（可以用 \(0\) 、 \(1\) 代替），然后把跟你连接在一起的边都染上你传入的颜色（拿一个...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="../../2024/10/23/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/P10187%20%E9%A2%98%E8%A7%A3/" title="P10187 题解">P10187 题解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-23T09:06:22.781Z" title="发表于 2024-10-23 17:06:22">2024-10-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="../../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/">洛谷题解</a></span></div><div class="content">题目传送门 其实这一道题目真的很水，大概分析一下就好了。 思路 别看题目很吓人，读入数字 \((1 \le S \le 10 ^ {10 ^ 5})\)，但就是个纸老虎。 情况1：\(S &lt; 10\) \(n\) 无论怎么取，一定是回文数，所以 Bessie 可以一口气取完。 情况2：\(S = 10\) \(n\) 无论怎么取，是不可能一遍取完的，因为 $ 10 $ 不是回文数, 所以 Elsie 赢。 情况3：\(10 &lt; S &lt; 20\) Bessie 可以将其变成情况2（比如 \(19\)，Bessie 可以先取 \(9\) 个，让其只剩下 \(10\) 个，变成情况2），再让 Elsie 取，Bessie 必赢。 情况4：\(S = 20\) \(S\) 无法变成情况2，所以 Bessie 必输。 ······ 我们可以看到，如果 \(S\) 是整十的数字，Bessie 必输，如果不是，Bessie...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="../4/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../4/#content-inner">4</a><span class="page-number current">5</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://cdn.luogu.com.cn/upload/usericon/852112.png" onerror="this.onerror=null;this.src='../../../../../img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">正在努力的小沈</div><div class="author-info-description">知识的敌人不是无知，而是已经掌握知识的幻觉。</div><div class="site-data"><a href="../../../../../archives/"><div class="headline">文章</div><div class="length-num">48</div></a><a href="../../../../../tags/"><div class="headline">标签</div><div class="length-num">32</div></a><a href="../../../../../categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Xiaoshen-QwQ/"><i class="fab fa-github"></i><span>这里是我的Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Xiaoshen-QwQ" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="../../../../../3884528022@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客，这里是由Hexo强力驱动，主题为Butterfly的博客，由github托管。本网站由一个蒟蒻小沈搭建并维护，欢迎各位大佬指教。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="" title="UVA10199题解">UVA10199题解</a><time datetime="2024-11-01T12:59:43.472Z" title="发表于 2024-11-01 20:59:43">2024-11-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../../%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/%E5%BC%BA%E8%81%94%E9%80%9A%E5%88%86%E9%87%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="强联通分量学习笔记">强联通分量学习笔记</a><time datetime="2024-11-01T11:44:29.744Z" title="发表于 2024-11-01 19:44:29">2024-11-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../../../../10/25/Atcoder%E9%A2%98%E8%A7%A3/DP%20U%20%E9%A2%98%E8%A7%A3/" title="DP U 题解">DP U 题解</a><time datetime="2024-10-25T11:22:47.873Z" title="发表于 2024-10-25 19:22:47">2024-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../../../../10/25/Atcoder%E9%A2%98%E8%A7%A3/DP%20Q%20%E9%A2%98%E8%A7%A3/" title="DP Q 题解">DP Q 题解</a><time datetime="2024-10-25T11:22:47.868Z" title="发表于 2024-10-25 19:22:47">2024-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="../../../../10/25/Atcoder%E9%A2%98%E8%A7%A3/DP%20P%20%E9%A2%98%E8%A7%A3/" title="DP P 题解">DP P 题解</a><time datetime="2024-10-25T11:22:47.866Z" title="发表于 2024-10-25 19:22:47">2024-10-25</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="../categories/Atcoder%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">Atcoder题解</span><span class="card-category-list-count">21</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/UVA%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">UVA题解</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">洛谷题解</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="../categories/%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">笔记</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="../tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" style="font-size: 1.1em; color: #999">矩阵乘法</a> <a href="../tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 1.1em; color: #999">字符串</a> <a href="../tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 1.1em; color: #999">最小生成树</a> <a href="../tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" style="font-size: 1.1em; color: #999">拓扑排序</a> <a href="../tags/BFS/" style="font-size: 1.1em; color: #999">BFS</a> <a href="../tags/Tarjan/" style="font-size: 1.1em; color: #999">Tarjan</a> <a href="../tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.1em; color: #999">笔记</a> <a href="../tags/Floyd/" style="font-size: 1.1em; color: #999">Floyd</a> <a href="../tags/%E5%89%B2%E7%82%B9/" style="font-size: 1.1em; color: #999">割点</a> <a href="../tags/%E8%B4%AA%E5%BF%83/" style="font-size: 1.34em; color: #99a3b0">贪心</a> <a href="../tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" style="font-size: 1.18em; color: #999ca1">博弈论</a> <a href="../tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp/" style="font-size: 1.18em; color: #999ca1">状态压缩dp</a> <a href="../tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" style="font-size: 1.18em; color: #999ca1">线段树</a> <a href="../tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 1.34em; color: #99a3b0">图论</a> <a href="../tags/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">线性数据结构</a> <a href="../tags/%E8%83%8C%E5%8C%85/" style="font-size: 1.26em; color: #999fa8">背包</a> <a href="../tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" style="font-size: 1.18em; color: #999ca1">并查集</a> <a href="../tags/%E6%9E%84%E9%80%A0/" style="font-size: 1.1em; color: #999">构造</a> <a href="../tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/" style="font-size: 1.18em; color: #999ca1">记忆化搜索</a> <a href="../tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" style="font-size: 1.1em; color: #999">树状数组</a> <a href="../tags/%E6%A6%82%E7%8E%87%E4%B8%8E%E6%9C%9F%E6%9C%9B/" style="font-size: 1.26em; color: #999fa8">概率与期望</a> <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 1.18em; color: #999ca1">动态规划</a> <a href="../tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92dp/" style="font-size: 1.42em; color: #99a6b7">动态规划dp</a> <a href="../tags/%E7%BA%BF%E6%80%A7dp/" style="font-size: 1.26em; color: #999fa8">线性dp</a> <a href="../tags/%E5%88%86%E7%B1%BB%E8%AE%A8%E8%AE%BA/" style="font-size: 1.1em; color: #999">分类讨论</a> <a href="../tags/%E5%BF%AB%E9%80%9F%E5%B9%82/" style="font-size: 1.1em; color: #999">快速幂</a> <a href="../tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" style="font-size: 1.26em; color: #999fa8">最短路</a> <a href="../tags/%E5%AD%97%E5%85%B8%E6%A0%91/" style="font-size: 1.18em; color: #999ca1">字典树</a> <a href="../tags/%E6%A0%91%E5%BD%A2dp/" style="font-size: 1.18em; color: #999ca1">树形dp</a> <a href="../tags/%E9%A2%98%E8%A7%A3/" style="font-size: 1.5em; color: #99a9bf">题解</a> <a href="../tags/%E5%BC%BA%E8%81%94%E9%80%9A%E5%88%86%E9%87%8F/" style="font-size: 1.1em; color: #999">强联通分量</a> <a href="../tags/%E5%8C%BA%E9%97%B4dp/" style="font-size: 1.34em; color: #99a3b0">区间dp</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="2024/10/">
+          <span class="card-archive-list-date">十月 2024</span>
+          <span class="card-archive-list-count">46</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">48</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-11-01T14:05:55.971Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By 正在努力的小沈</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="../../js/utils.js"></script><script src="../../js/main.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="❤ 富强 ❤,❤ 民主 ❤,❤ 文明 ❤,❤ 和谐 ❤,❤ 自由 ❤,❤ 平等 ❤,❤ 公正 ❤,❤ 法治 ❤,❤ 爱国 ❤,❤ 敬业 ❤,❤ 诚信 ❤,❤ 友善 ❤" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
